@@ -25,7 +25,7 @@ To access the analyses for each day of the week, following the links below:
 [Sunday](Sunday.md)
 
 AUTOMATION CODE:
-The following code was attempted for automating the reports for each weekend. The corresponding YAML header included params: day: and -- to access the parameters -- my code (initially) included filter(days==params$day). Unfortunately, I was unable to get the automation code to work, so I ended up hardcoding the weekday for the filters in order to generate each of the reports. 
+The following code was attempted for automating the reports for each weekday. The corresponding YAML header included params: day: and -- to access the parameters -- my code (initially) included filter(days==params$day). Unfortunately, I was unable to get the automation code to work, so I ended up hardcoding the weekday for the filters in order to generate each of the reports. 
 
 library(markdown)
 
