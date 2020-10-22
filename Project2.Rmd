@@ -116,3 +116,15 @@ pred_boost_gfm
 
 ```
 
+```{r lucy}
+lmfit <- train(shares ~ n_non_stop_words + num_hrefs + data_channel_is_world + kw_avg_avg + self_reference_min_shares + self_reference_avg_sharess + LDA_03 + global_subjectivity + 
+               avg_negative_polarity, data=train_news, 
+             method = "lm", 
+             preProcess = c("center", "scale"),
+             trControl = trainControl(method = "cv", number = 10))
+
+pred_lmfit <- predict(lmfit, newdata = test_news)
+pred_lmfit_gfm <- postResample(pred_lmfit, test_news$shares)
+pred_lmfit_gfm
+```
+
